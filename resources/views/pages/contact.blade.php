@@ -41,7 +41,7 @@
         width: 3rem;
         height: 3rem;
         border-radius: 0.75rem;
-        background-color: hsla(var(--accent), 0.1);
+        background-color: hsl(var(--accent) / 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -54,7 +54,7 @@
         border-radius: 1.5rem;
         padding: 2.5rem;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        border: 1px solid hsla(var(--border), 0.5);
+        border: 1px solid hsl(var(--border) / 0.5);
     }
 
     .form-group {
@@ -74,7 +74,7 @@
         width: 100%;
         height: 3rem;
         padding: 0.75rem 1rem;
-        border: 1px solid hsla(var(--border), 1);
+        border: 1px solid hsl(var(--border));
         border-radius: 0.75rem;
         font-size: 1rem;
         background-color: hsl(var(--background));
@@ -86,7 +86,7 @@
     .form-textarea:focus {
         outline: none;
         border-color: hsl(var(--primary));
-        box-shadow: 0 0 0 3px hsla(var(--primary), 0.1);
+        box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
     }
 
     .form-textarea {
@@ -109,7 +109,7 @@
         padding: 4rem 2rem;
         background-color: hsl(var(--card));
         border-radius: 1.5rem;
-        border: 1px solid hsla(var(--border), 0.5);
+        border: 1px solid hsl(var(--border) / 0.5);
     }
 
     .success-icon {
@@ -358,7 +358,7 @@
                                 @enderror
                             </div>
                             
-                            <button type="submit" class="btn-cta">
+                            <button type="submit" class="btn-cta" style="width: 100%">
                                 Send Message
                                 <svg class="lucide-lg arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>

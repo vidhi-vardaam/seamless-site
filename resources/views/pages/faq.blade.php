@@ -38,10 +38,6 @@
             transition: box-shadow 0.3s ease;
         }
 
-        .accordion-item:hover {
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
         .accordion-trigger {
             width: 100%;
             display: flex;
@@ -49,17 +45,13 @@
             justify-content: space-between;
             padding: 1.5rem 0;
             font-size: 1.125rem;
-            font-weight: 600;
+            font-weight: 700;
             color: hsl(var(--foreground));
             text-align: left;
             background: none;
             border: none;
             cursor: pointer;
             transition: color 0.2s ease;
-        }
-
-        .accordion-trigger:hover {
-            color: hsl(var(--primary));
         }
 
         .accordion-icon {
@@ -87,7 +79,8 @@
 
         .accordion-content-inner {
             color: hsl(var(--foreground) / 0.7);
-            line-height: 1.75;
+            line-height: 23px;
+            font-size: 14px;
         }
 
         /* Button */

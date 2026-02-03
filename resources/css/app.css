@@ -3,10 +3,10 @@
 
 /* Aspira Bold - using a similar geometric sans-serif as fallback */
 @font-face {
-  font-family: 'Aspira';
-  font-weight: 700;
+  font-family: 'Inter';
+  font-weight: 600;
   font-style: normal;
-  src: local('Aspira Bold'), local('Aspira-Bold');
+  src: local('Inter Bold'), local('Inter-Bold');
 }
 
 /* CSS Variables */

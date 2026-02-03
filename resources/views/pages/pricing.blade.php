@@ -1031,6 +1031,12 @@
           indicator.classList.remove('active');
         }
       });
+
+      // Update slider track background
+      const min = parseInt(slider.min) || 0;
+      const max = parseInt(slider.max) || 7;
+      const percentage = ((index - min) / (max - min)) * 100;
+      slider.style.background = `linear-gradient(to right, hsl(var(--primary)) ${percentage}%, hsl(var(--secondary)) ${percentage}%)`;
     }
 
     slider.addEventListener('input', (e) => {
@@ -1078,5 +1084,8 @@
       // Toggle current
       item.classList.toggle('active');
     }
+
+    // Initialize pricing
+    updatePricing(parseInt(slider.value));
   </script>
 @endpush
