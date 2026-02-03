@@ -47,10 +47,27 @@ Route::post('/request-demo', function (\Illuminate\Http\Request $request) {
 
     // Here you can add logic to send email, save to database, etc.
     // For now, just redirect back with success message
-    
+
     return redirect()->route('request-demo')->with('success', 'Demo request received! We will contact you soon.');
 })->name('demo.submit');
 
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
+
+Route::post('/contact', function (\Illuminate\Http\Request $request) {
+    $validated = $request->validate([
+        'first_name' => 'required|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'email' => 'required|email|max:255',
+        'organization' => 'nullable|string|max:255',
+        'subject' => 'required|string|max:255',
+        'message' => 'required|string|max:2000',
+    ]);
+
+    return redirect()->back()->with('success', 'Message sent! We will respond within one business day.');
+})->name('contact.submit');
+
+Route::get('/components-demo', function () {
+    return view('pages.components-demo');
+})->name('components-demo');

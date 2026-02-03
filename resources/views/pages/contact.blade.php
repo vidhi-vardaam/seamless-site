@@ -4,68 +4,12 @@
 
 @push('styles')
 <style>
-    :root {
-        --primary: 220 90% 56%;
-        --secondary: 280 70% 60%;
-        --accent: 340 80% 58%;
-        --background: 0 0% 100%;
-        --foreground: 222.2 84% 4.9%;
-        --card: 0 0% 100%;
-        --muted: 210 40% 96.1%;
-        --border: 214.3 31.8% 91.4%;
-    }
 
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: hsl(var(--background));
-        color: hsl(var(--foreground));
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    }
 
-    .font-display {
-        font-family: 'Georgia', 'Times New Roman', serif;
-        font-weight: 700;
-    }
 
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
-    }
 
     /* Animations */
-    @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    .animate-fade-up {
-        animation: fadeUp 0.8s ease-out forwards;
-        opacity: 0;
-    }
-
-    .animate-delay-100 {
-        animation-delay: 0.1s;
-    }
-
-    /* Scroll Animation Observer */
-    .scroll-animate {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
-
-    .scroll-animate.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
 
     /* Hero Section */
     .hero-section {
@@ -84,9 +28,7 @@
         line-height: 1.1;
     }
 
-    .text-accent {
-        color: hsl(var(--accent));
-    }
+
 
     /* Contact Info Cards */
     .contact-info-item {
@@ -159,36 +101,7 @@
     }
 
     /* Button */
-    .btn-cta {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 1rem 2rem;
-        width: 100%;
-        background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-        color: white;
-        border: none;
-        border-radius: 9999px;
-        font-weight: 600;
-        font-size: 1rem;
-        text-decoration: none;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
 
-    .btn-cta:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-
-    .btn-cta:hover .arrow-icon {
-        transform: translateX(4px);
-    }
-
-    .arrow-icon {
-        transition: transform 0.3s ease;
-    }
 
     /* Success Message */
     .success-card {

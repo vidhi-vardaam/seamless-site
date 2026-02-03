@@ -1,23 +1,88 @@
-<section class="section-purple bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('assets/section-3-bg.png') }}')">
-  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto py-20">
-    <x-scroll-animate animation="scale">
-      <h2 class="heading-section text-primary-foreground mb-6 leading-tight">
+<section class="better-way-section" style="background-image: url('{{ asset('assets/section-3-bg.png') }}')">
+  <div class="better-way-container">
+    <x-ui-scroll-animate animation="scale">
+      <h2 class="better-way-heading">
         There Has to<br />
         Be a Better Way.
       </h2>
-    </x-scroll-animate>
+    </x-ui-scroll-animate>
 
-    <x-scroll-animate animation="fade-up" delay="150">
-      <p class="text-body text-primary-foreground/80 mb-4 max-w-xl mx-auto">
+    <x-ui-scroll-animate animation="fade-up" delay="150">
+      <p class="better-way-text">
         Membership, engagement, and design shouldn't<br />
         compete. They should work together.
       </p>
-    </x-scroll-animate>
+    </x-ui-scroll-animate>
 
-    <x-scroll-animate animation="fade-up" delay="300">
-      <p class="text-lg md:text-xl font-display text-primary-foreground">
+    <x-ui-scroll-animate animation="fade-up" delay="300">
+      <p class="better-way-tagline">
         Quietly. Continuously. Seamless.
       </p>
-    </x-scroll-animate>
+    </x-ui-scroll-animate>
   </div>
 </section>
+
+<style>
+  .better-way-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .better-way-container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 5rem 1.5rem;
+    max-width: 56rem;
+    margin: 0 auto;
+  }
+
+  .better-way-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: hsl(var(--primary-foreground));
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 768px) {
+    .better-way-heading {
+      font-size: 3rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .better-way-heading {
+      font-size: 3.5rem;
+    }
+  }
+
+  .better-way-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) {
+    .better-way-text {
+      font-size: 1.125rem;
+    }
+  }
+
+  .better-way-tagline {
+    font-size: 1.125rem;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: hsl(var(--primary-foreground));
+  }
+
+  @media (min-width: 768px) {
+    .better-way-tagline {
+      font-size: 1.25rem;
+    }
+  }
+</style>

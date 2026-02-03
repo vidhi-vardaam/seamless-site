@@ -33,56 +33,56 @@
     $id = 'testimonials-' . uniqid();
 @endphp
 
-<section id="{{ $id }}" class="relative py-24 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('{{ asset('assets/section-6-bg.png') }}')"></div>
+<section id="{{ $id }}" class="testimonials-section">
+  <div class="testimonials-bg" style="background-image: url('{{ asset('assets/section-6-bg.png') }}')"></div>
 
-  <div class="container mx-auto px-6 relative z-10">
-    <div class="text-center mb-16">
-      <span class="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">Testimonials</span>
-      <h2 class="text-4xl md:text-5xl font-bold text-foreground mb-4">Loved by Industry Leaders</h2>
-      <p class="text-muted-foreground text-lg max-w-2xl mx-auto">See why leading associations trust us to power their member experience</p>
+  <div class="testimonials-container">
+    <div class="testimonials-header">
+      <span class="testimonials-badge">Testimonials</span>
+      <h2 class="testimonials-title">Loved by Industry Leaders</h2>
+      <p class="testimonials-subtitle">See why leading associations trust us to power their member experience</p>
     </div>
 
-    <div class="max-w-3xl mx-auto">
-      <div class="relative">
-        <button data-action="prev" class="testimonial-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-20 w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-foreground hover:bg-muted transition-all hover:scale-110" aria-label="Previous testimonial">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+    <div class="testimonials-content">
+      <div class="testimonials-slider">
+        <button data-action="prev" class="testimonials-nav testimonials-nav-prev" aria-label="Previous testimonial">
+          <svg class="testimonials-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
 
-        <button data-action="next" class="testimonial-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-20 w-10 h-10 rounded-full bg-background shadow-lg border border-border flex items-center justify-center text-foreground hover:bg-muted transition-all hover:scale-110" aria-label="Next testimonial">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <button data-action="next" class="testimonials-nav testimonials-nav-next" aria-label="Next testimonial">
+          <svg class="testimonials-nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </button>
 
-        <div class="relative bg-background/80 backdrop-blur-sm rounded-2xl shadow-xl border border-border/50 p-6 md:p-10">
+        <div class="testimonials-card">
           @foreach($testimonials as $i => $t)
             <div class="testimonial-item {{ $i === 0 ? 'active' : '' }}" data-index="{{ $i }}" style="display: {{ $i === 0 ? 'block' : 'none' }};">
-              <div class="absolute -top-4 left-8 md:left-10">
-                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center shadow-lg">
-                  <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h8"/></svg>
+              <div class="testimonial-quote-icon">
+                <div class="testimonial-quote-icon-inner">
+                  <svg class="testimonial-quote-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h8"/></svg>
                 </div>
               </div>
 
-              <div class="content transition-all duration-300 ease-out">
-                <div class="flex gap-0.5 mb-4 pt-3">
+              <div class="testimonial-content">
+                <div class="testimonial-stars">
                   @for($s = 0; $s < $t['rating']; $s++)
-                    <svg class="w-4 h-4 fill-primary text-primary" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431L24 9.748l-6 5.848L19.335 24 12 20.201 4.665 24 6 15.596 0 9.748l8.332-1.73z"/></svg>
+                    <svg class="testimonial-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .587l3.668 7.431L24 9.748l-6 5.848L19.335 24 12 20.201 4.665 24 6 15.596 0 9.748l8.332-1.73z"/></svg>
                   @endfor
                 </div>
 
-                <blockquote class="text-base md:text-lg lg:text-xl text-foreground leading-relaxed mb-6 font-medium">"{{ $t['quote'] }}"</blockquote>
+                <blockquote class="testimonial-quote">"{{ $t['quote'] }}"</blockquote>
 
-                <div class="flex items-center gap-3">
-                  <div class="relative">
-                    <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                      <span class="text-lg font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent">{{ strtoupper(substr($t['author'],0,1)) }}</span>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar-wrapper">
+                    <div class="testimonial-avatar">
+                      <span class="testimonial-avatar-letter">{{ strtoupper(substr($t['author'],0,1)) }}</span>
                     </div>
-                    <div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-primary rounded-full border-2 border-background" />
+                    <div class="testimonial-avatar-badge"></div>
                   </div>
 
-                  <div>
-                    <p class="font-bold text-sm text-foreground">{{ $t['author'] }}</p>
-                    <p class="text-muted-foreground text-xs">{{ $t['title'] }}</p>
-                    <p class="text-xs text-primary font-medium">{{ $t['company'] }}</p>
+                  <div class="testimonial-author-info">
+                    <p class="testimonial-author-name">{{ $t['author'] }}</p>
+                    <p class="testimonial-author-title">{{ $t['title'] }}</p>
+                    <p class="testimonial-author-company">{{ $t['company'] }}</p>
                   </div>
                 </div>
               </div>
@@ -91,20 +91,337 @@
         </div>
       </div>
 
-      <div class="flex justify-center gap-3 mt-10">
+      <div class="testimonials-indicators">
         @foreach($testimonials as $i => $t)
-          <button data-indicator-index="{{ $i }}" class="testimonial-indicator h-2 rounded-full transition-all duration-500 {{ $i === 0 ? 'active-indicator w-10 bg-gradient-to-r from-primary to-accent' : 'w-2 bg-foreground/20 hover:bg-foreground/40' }}" aria-label="Go to testimonial {{ $i + 1 }}"></button>
+          <button data-indicator-index="{{ $i }}" class="testimonial-indicator {{ $i === 0 ? 'indicator-active' : '' }}" aria-label="Go to testimonial {{ $i + 1 }}"></button>
         @endforeach
       </div>
     </div>
   </div>
 
   <style>
-    #{{ $id }} .testimonial-item { opacity: 0; transform: translateX(0); transition: opacity 0.3s ease, transform 0.3s ease; }
-    #{{ $id }} .testimonial-item.active { opacity: 1; transform: translateX(0); }
-    #{{ $id }} .anim-left { opacity: 0; transform: translateX(-20px); }
-    #{{ $id }} .anim-right { opacity: 0; transform: translateX(20px); }
-    #{{ $id }} .active-indicator { border-radius: 9999px; }
+    .testimonials-section {
+      position: relative;
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+
+    .testimonials-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .testimonials-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .testimonials-badge {
+      display: inline-block;
+      padding: 0.375rem 1rem;
+      background-color: rgba(59, 130, 246, 0.1);
+      color: hsl(var(--primary));
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .testimonials-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: hsl(var(--foreground));
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-title {
+        font-size: 3rem;
+      }
+    }
+
+    .testimonials-subtitle {
+      color: hsl(var(--muted-foreground));
+      font-size: 1.125rem;
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    .testimonials-content {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    .testimonials-slider {
+      position: relative;
+    }
+
+    .testimonials-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 20;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 9999px;
+      background-color: hsl(var(--background));
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border: 1px solid hsl(var(--border));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: hsl(var(--foreground));
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .testimonials-nav:hover {
+      background-color: hsl(var(--muted));
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .testimonials-nav-prev {
+      left: 0;
+      transform: translateY(-50%) translateX(-1rem);
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-nav-prev {
+        transform: translateY(-50%) translateX(-3rem);
+      }
+    }
+
+    .testimonials-nav-next {
+      right: 0;
+      transform: translateY(-50%) translateX(1rem);
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-nav-next {
+        transform: translateY(-50%) translateX(3rem);
+      }
+    }
+
+    .testimonials-nav-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .testimonials-card {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 1rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(229, 231, 235, 0.5);
+      padding: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .testimonials-card {
+        padding: 2.5rem;
+      }
+    }
+
+    .testimonial-item {
+      opacity: 0;
+      transform: translateX(0);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .testimonial-item.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    #{{ $id }} .anim-left {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    #{{ $id }} .anim-right {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+
+    .testimonial-quote-icon {
+      position: absolute;
+      top: -1rem;
+      left: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-quote-icon {
+        left: 2.5rem;
+      }
+    }
+
+    .testimonial-quote-icon-inner {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(to bottom right, hsl(var(--primary)), rgba(59, 130, 246, 0.7));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-quote-svg {
+      width: 1rem;
+      height: 1rem;
+      color: white;
+    }
+
+    .testimonial-content {
+      transition: all 0.3s ease-out;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 0.125rem;
+      margin-bottom: 1rem;
+      padding-top: 0.75rem;
+    }
+
+    .testimonial-star {
+      width: 1rem;
+      height: 1rem;
+      fill: hsl(var(--primary));
+      color: hsl(var(--primary));
+    }
+
+    .testimonial-quote {
+      font-size: 1rem;
+      color: hsl(var(--foreground));
+      line-height: 1.625;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-quote {
+        font-size: 1.125rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonial-quote {
+        font-size: 1.25rem;
+      }
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .testimonial-avatar-wrapper {
+      position: relative;
+    }
+
+    .testimonial-avatar {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.2), rgba(244, 63, 94, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .testimonial-avatar-letter {
+      font-size: 1.125rem;
+      font-weight: 700;
+      background: linear-gradient(to bottom right, hsl(var(--primary)), hsl(var(--accent)));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .testimonial-avatar-badge {
+      position: absolute;
+      bottom: -0.125rem;
+      right: -0.125rem;
+      width: 0.875rem;
+      height: 0.875rem;
+      background-color: hsl(var(--primary));
+      border-radius: 9999px;
+      border: 2px solid hsl(var(--background));
+    }
+
+    .testimonial-author-info {
+      /* Author info container */
+    }
+
+    .testimonial-author-name {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: hsl(var(--foreground));
+    }
+
+    .testimonial-author-title {
+      color: hsl(var(--muted-foreground));
+      font-size: 0.75rem;
+    }
+
+    .testimonial-author-company {
+      font-size: 0.75rem;
+      color: hsl(var(--primary));
+      font-weight: 500;
+    }
+
+    .testimonials-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-top: 2.5rem;
+    }
+
+    .testimonial-indicator {
+      height: 0.5rem;
+      border-radius: 9999px;
+      transition: all 0.5s ease;
+      width: 0.5rem;
+      background-color: rgba(34, 34, 34, 0.2);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .testimonial-indicator:hover {
+      background-color: rgba(34, 34, 34, 0.4);
+    }
+
+    .testimonial-indicator.indicator-active,
+    .testimonial-indicator.active-indicator {
+      width: 2.5rem;
+      background: linear-gradient(to right, hsl(var(--primary)), hsl(var(--accent)));
+    }
+
+    .testimonial-indicator.w-10 {
+      width: 2.5rem;
+    }
+
+    .testimonial-indicator.w-2 {
+      width: 0.5rem;
+    }
+
+    .testimonial-indicator.bg-foreground\/20 {
+      background-color: rgba(34, 34, 34, 0.2);
+    }
   </style>
 
   <script>
@@ -143,16 +460,12 @@
 
         // update indicators
         indicators.forEach((btn, i) => {
-          btn.classList.toggle('active-indicator', i === index);
           if (i === index) {
-            btn.classList.add('w-10');
-            btn.classList.remove('w-2');
-            btn.classList.remove('bg-foreground/20');
+            btn.classList.add('indicator-active', 'w-10');
+            btn.classList.remove('w-2', 'bg-foreground/20');
           } else {
-            btn.classList.remove('w-10');
-            btn.classList.add('w-2');
-            btn.classList.add('bg-foreground/20');
-            btn.classList.remove('bg-gradient-to-r');
+            btn.classList.remove('indicator-active', 'w-10');
+            btn.classList.add('w-2', 'bg-foreground/20');
           }
         });
 

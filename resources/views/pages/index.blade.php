@@ -5,11 +5,11 @@
 
 @section('content')
 <div class="min-h-screen">
-  @include('components.Section.hero')
-  @include('components.Section.frustration')
-  @include('components.Section.better-way')
-  @include('components.Section.features')
-  @include('components.Section.membership')
-  @include('components.Section.testimonials')
+  <x-section-hero />
+  <x-section-frustration />
+  <x-section-better-way />
+  <x-section-features />
+  <x-section-membership />
+  <x-section-testimonials />
 </div>
 @endsection

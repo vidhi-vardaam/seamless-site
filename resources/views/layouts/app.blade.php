@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Seamless - Modern AMS Platform')</title>
-    <meta name="description" content="@yield('description', 'A modern, unified AMS Platform built for now and what\'s to come.')">
-    
+    <meta name="description"
+        content="@yield('description', 'A modern, unified AMS Platform built for now and what\'s to come.')">
+
     <!-- Tailwind CSS -->
     @vite('resources/css/app.css')
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Segoe+UI:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;700&family=Segoe+UI:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Custom Styles -->
     <style>
-        :root {
-            --primary: 220 90% 56%;
-            --secondary: 280 70% 60%;
-            --accent: 340 80% 58%;
-            --background: 0 0% 100%;
-            --foreground: 222.2 84% 4.9%;
-            --card: 0 0% 100%;
-            --muted: 210 40% 96.1%;
-            --border: 214.3 31.8% 91.4%;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -58,7 +51,7 @@
             justify-content: center;
             gap: 0.5rem;
             padding: 1rem 2rem;
-            background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+            background: var(--gradient-cta);
             color: white;
             border-radius: 9999px;
             font-weight: 600;
@@ -102,6 +95,7 @@
 
     @stack('styles')
 </head>
+
 <body>
     <!-- Header -->
     @include('layouts.header')
@@ -122,4 +116,5 @@
 
     @stack('scripts')
 </body>
+
 </html>
