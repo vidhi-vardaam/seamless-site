@@ -305,7 +305,7 @@
     }
 
     .whats-included-content {
-      max-width: 80rem;
+      max-width: 60rem;
       margin: 0 auto;
     }
 
@@ -573,21 +573,32 @@
     }
 
     .faq-list {
-      max-width: 48rem;
+      max-width: 52rem;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .accordion-item {
-      border: 1px solid hsl(var(--border) / 0.5);
-      border-radius: 0.5rem;
+      background-color: white;
+      border: 1px solid hsl(var(--border));
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-item:hover {
+      border-color: hsl(var(--border) / 0.8);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .accordion-item.active {
+      border-color: hsl(var(--border) / 0.8);
     }
 
     .accordion-header {
       cursor: pointer;
-      padding: 1.5rem;
+      padding: 1.75rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -596,14 +607,16 @@
 
     .accordion-question {
       font-size: 1.125rem;
-      font-weight: 500;
+      font-weight: 600;
+      color: hsl(var(--foreground));
+      padding-right: 2rem;
     }
 
     .accordion-icon {
-      width: 1.5rem;
-      height: 1.5rem;
-      transition: transform 0.3s;
-      color: hsl(var(--primary));
+      width: 1.25rem;
+      height: 1.25rem;
+      transition: transform 0.3s ease;
+      color: hsl(var(--muted-foreground));
       flex-shrink: 0;
     }
 
@@ -614,21 +627,28 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
-      padding: 0 1.5rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      padding: 0 2rem;
     }
 
     .accordion-item.active .accordion-content {
       max-height: 500px;
-      padding: 0 1.5rem 1.5rem 1.5rem;
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    .accordion-answer {
+      color: #64748b;
+      line-height: 1.25;
+      font-size: 1rem;
     }
 
     /* Closing Section Styles */
     .closing {
-      padding: 6rem 0;
+      padding: 8rem 0;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary)), hsl(var(--secondary)));
+      background: linear-gradient(162deg, hsl(var(--primary)), hsl(var(--secondary)));
+      border-top: 1px solid hsl(var(--border) / 0.1);
     }
 
     @media (min-width: 768px) {
@@ -674,25 +694,34 @@
     }
 
     .closing-title {
-      font-size: 2.25rem;
+      font-size: 2.75rem;
       font-weight: 700;
       color: white;
       margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
     }
 
     @media (min-width: 768px) {
       .closing-title {
-        font-size: 3rem;
+        font-size: 3.5rem;
       }
     }
 
     .closing-text {
       font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 2.5rem;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 3rem;
       max-width: 42rem;
       margin-left: auto;
       margin-right: auto;
+      font-weight: 300;
+    }
+
+    .closing-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
   </style>
 @endpush
@@ -797,7 +826,7 @@
         </div>
 
         <div class="pricing-cta-wrapper">
-          <a href="{{ route('request-demo') }}" class="btn-cta">
+          <a href="{{ route('request-demo') }}" class="btn-cta bg-primary">
             Request a Demo
             <svg class="lucide-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
@@ -963,7 +992,7 @@
             <div class="accordion-header" onclick="toggleAccordion(this)">
               <span class="accordion-question">{{ $faq['question'] }}</span>
               <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </div>
             <div class="accordion-content accordion-answer">
@@ -990,13 +1019,13 @@
           renegotiation.
         </p>
         <div class="closing-buttons">
-          <a href="{{ route('request-demo') }}" class="closing-btn-primary">
+          <a href="{{ route('request-demo') }}" class="btn-white">
             Request a Demo
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="lucide-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <a href="{{ route('contact') }}" class="closing-btn-secondary">
+          <a href="{{ route('contact') }}" class="btn-secondary">
             Contact Us
           </a>
         </div>
