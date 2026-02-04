@@ -71,3 +71,7 @@ Route::post('/contact', function (\Illuminate\Http\Request $request) {
 Route::get('/components-demo', function () {
     return view('pages.components-demo');
 })->name('components-demo');
+
+Route::get('/404', function () {
+    return view('errors.404');
+})->name('404');
