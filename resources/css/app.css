@@ -181,7 +181,7 @@ button {
 /* Frustration Section */
 .frustration-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +192,7 @@ button {
 /* Better Way Section */
 .better-way-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,7 +203,7 @@ button {
 /* Features Section */
 .features-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -214,7 +214,7 @@ button {
 /* Membership Section */
 .membership-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -441,7 +441,7 @@ button {
 }
 
 .hero-content-inner {
-  max-width: 48rem;
+  max-width: 55rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -933,7 +933,7 @@ button {
 }
 
 .integration-accordion.active {
-  background-color: hsl(230deg 1.76% 64% / 8%);
+  background-color: #F8F8F8;
   border-color: hsl(230deg 1.76% 64% / 8%);
   box-shadow: 0 0 0 1px hsl(var(--primary) / 0.1);
 }
@@ -1203,8 +1203,57 @@ section {
   z-index: 10;
 }
 
+.about-hero-section , .features-hero-section {
+            min-height: 650px;
+        }
+
+        .about-hero-section .container {
+          margin-top: 50px;
+        }
+  
+        .hero-subtitle {
+          font-size: 1.25rem;
+          margin-top: 20px;
+        }
+
+        @media (min-width: 600px) and (max-width: 1024px){
+          .frustration-section {
+              max-height: 60vh !important;
+              background-position: right !important;
+          }
+
+          .better-way-section {
+            max-height: 60vh !important;
+          }
+
+          .features-section , .membership-section {
+            max-height: 70vh !important;
+          }
+
+          .membership-bottom {
+            padding-top: 30px !important;
+          }
+
+          .features-container {
+            padding: 0px 30px !important;
+          }
+
+          .belief-box-content {
+            flex-direction: column !important;
+          }
+
+          .belief-box-content .belief-link {
+            flex-direction: row !important;
+          }
+        }
+
 /* Responsive text sizing for mobile */
 @media (max-width: 640px) {
+  .hero-section {
+    min-height: 80vh;
+    padding: 50px 0;
+  }
+
   .hero-title {
     font-size: 2rem !important;
   }
@@ -1218,4 +1267,165 @@ section {
   .testimonials-title {
     font-size: 1.75rem !important;
   }
+
+   .scroll-indicator {
+        display: none;
+    }
+
+  .membership-bottom {
+    margin-top: 50px !important;
+  }
+  
+  .frustration-section {
+    max-height: 50vh;
+  }
+
+  .frustration-container {
+    padding: 1rem !important;
+  }
+
+  .frustration-wrapper {
+    min-height: 50vh;
+  }
+
+  .better-way-section {
+    max-height: 50vh;
+  }
+
+  .features-section .feature-toggle {
+    align-items: baseline;
+  }
+
+  .membership-section {
+    height: fit-content;
+  }
+
+  .membership-section .membership-bottom {
+    padding-top: 20px !important;
+  }
+
+    .footer-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+
+    .footer-brand {
+        width: 43% !important;
+    }
+
+    .footer-column {
+        width: 43% !important;
+    }
+
+    .about-hero-section .about-hero-buttons, .feature-hero-section .feature-hero-buttons {
+      flex-direction: column !important;
+      padding: 20px 0 50px 0px !important;
+    }
+
+    .about-hero-buttons a, .feature-hero-buttons a {
+      width: 100% !important;
+    }
+
+    .about-intro-section {
+      padding: 80px 0 !important;
+    }
+
+    .belief-box-content {
+      flex-direction: column !important;
+    }
+
+    .belief-box-content .belief-link {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .about-approach-section {
+      padding: 80px 0 !important;
+    }
+
+    .scroll-animate {
+      margin-bottom: 30px !important;
+    }
+
+    .scroll-animate.animate-delay-300.visible {
+      margin-bottom: 0px !important;
+      padding-bottom: 0px !important;
+    }
+
+    .about-value-section {
+      padding: 80px 0 !important;
+    }
+
+    .about-value-section h2 , .about-why-matters-section h2, .about-build-next-section h2, .about-cta-section h2, .features-cta-section h2 {
+      font-size: 30px !important;
+      line-height: 36px !important;
+    }
+
+    .about-why-matters-section, .about-build-next-section, .about-cta-section , .features-cta-section {
+      padding: 80px 0 !important;
+    }
+
+    .build-before-text-container, .about-cta-section .scroll-animate {
+      margin-bottom: 0px !important;
+    }
+
+    .build-before-text {
+      margin-bottom: 30px !important;
+    }
+
+    .cta-section-buttons , .features-cta-buttons {
+      flex-direction: column !important;
+      gap: 20px !important;
+    }
+    
+    .cta-section-buttons a, .features-cta-buttons a , .pricing-closing-section .closing-buttons a {
+      width: 100% !important;
+    }
+
+    .about-hero-text {
+      margin-top: 20px !important;
+       font-size: 1.125rem !important;
+    }
+
+    .features-hero-text , .features-philosophy-section .features-philosophy-text {
+      font-size: 1.125rem !important;
+    }
+
+    .features-philosophy-section , .features-pillars-section , .features-core-section, .features-video-section {
+      padding: 80px 0 !important;
+    }
+
+    .features-core-section .capability-card div {
+      flex-direction: column !important;
+    }
+
+    .integration-leading-section , .integration-stats-section , .integration-documentation-section, .integration-featured-section, .integration-cta-section {
+      padding: 80px 0 !important;
+    }
+
+    .pricint-hero-section , .pricing-tiers-section , .pricing-whats-included-section , .pricing-implementation-section  , .pricing-testimonial-section , .pricing-faq-section , .pricing-closing-section , .faq-cta-section , .request-demo-faq-section , .contact-form-section {
+      padding: 80px 0 !important;
+    }
+
+    .pricint-hero-section .pricing-hero-title {
+      margin-top: 50px !important;
+    }
+
+    .features-badges {
+      flex-direction: column !important;
+      width: 100% !important;
+      align-items: flex-start !important;
+      border-radius: 25px !important;
+    }
+
+    .implementation-tier {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+
+    .feature-hero-buttons {
+      flex-direction: column !important;
+      gap: 20px !important;
+    }
 }

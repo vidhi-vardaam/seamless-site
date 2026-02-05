@@ -312,20 +312,20 @@
         <div class="container" style="position: relative; z-index: 10;">
             <div style="max-width: 64rem; margin: 0 auto; text-align: center;">
                 <div class="scroll-animate">
-                    <h1 class="font-display"
-                        style="font-size: clamp(3rem, 6vw, 4.5rem); color: white; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -0.02em;">
+                    <h1 class="hero-title font-display"
+                        style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -0.02em;">
                         Capabilities <span class="text-accent">that work together.</span>
                     </h1>
                 </div>
 
                 <div class="scroll-animate animate-delay-100">
-                    <p style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem; font-weight: 300;">
+                    <p class="features-hero-text" style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.8); line-height: 1.25; margin-bottom: 1rem;">
                         Built around membership. Unified from backend to frontend.
                     </p>
                 </div>
 
                 <div class="scroll-animate animate-delay-200">
-                    <div
+                    <div class="feature-hero-buttons"
                         style="display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; margin-top: 2rem;">
                         <a href="#video-section" class="btn-white">
                             See Seamless in Action
@@ -343,12 +343,12 @@
     </section>
 
     <!-- Philosophy Intro -->
-    <section style="padding: 7rem 0; position: relative; overflow: hidden;">
+    <section class="features-philosophy-section" style="padding: 7rem 0; position: relative; overflow: hidden;">
         <div class="dot-pattern"></div>
 
         <div class="container" style="position: relative;">
             <div class="scroll-animate" style="max-width: 48rem; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.875rem; color: hsl(var(--foreground)); line-height: 1.75; font-weight: 300;">
+                <p class="features-philosophy-text" style="font-size: 1.875rem; color: hsl(var(--foreground)); line-height: 1.75; font-weight: 300;">
                     Associations don't need more features.
                 </p>
                 <p class="font-display" style=" font-size: 1.875rem; margin-top: 0.5rem; background: linear-gradient(135deg, hsl(230, 85%, 55%) 0%, hsl(270, 70%, 55%) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; ">
@@ -360,7 +360,7 @@
     </section>
 
     <!-- Three Pillars Section -->
-    <section id="pillars-section"
+    <section id="pillars-section" class="features-pillars-section"
         style="padding: 9rem 0; position: relative; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ asset('assets/section-6-bg.png') }}')">
         <div class="container" style="position: relative;">
             <div class="scroll-animate" style="text-align: center; margin-bottom: 5rem;">
@@ -380,7 +380,7 @@
                                 'title' => 'Seamless',
                                 'descriptor' => 'Continuity across the entire member journey.',
                                 'copy' => "Membership should feel continuous — not transactional. From joining and renewal to events, learning, and ongoing engagement, every interaction flows naturally. Members don't experience systems. They experience continuity.",
-                                'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>',
+                                'icon' => '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path>',
                                 'delay' => '0'
                             ],
                             [
@@ -436,7 +436,7 @@
     </section>
 
     <!-- Core Capabilities -->
-    <section style="padding: 9rem 0; position: relative; overflow: hidden;">
+    <section class="features-core-section" style="padding: 9rem 0; position: relative; overflow: hidden;">
         <div class="blob-primary"></div>
         <div class="blob-secondary"></div>
 
@@ -546,7 +546,7 @@
     </section>
 
     <!-- Product Video Section -->
-    <section id="video-section"
+    <section id="video-section" class="features-video-section"
         style="padding: 9rem 0; position: relative; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ asset('assets/section-6-bg.png') }}')">
         <div class="container" style="position: relative;">
             <div style="max-width: 80rem; margin: 0 auto;">
@@ -580,7 +580,7 @@
     </section>
 
     <!-- Closing Section -->
-    <section class="cta-section">
+    <section class="cta-section features-cta-section">
         <div class="cta-gradient"></div>
         <div class="cta-glow-1"></div>
         <div class="cta-glow-2"></div>
@@ -597,7 +597,7 @@
                     that think in decades, not quarters.
                 </p>
 
-                <div
+                <div class="features-cta-buttons"
                     style="display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center;">
                     <a href="{{ route('request-demo') }}" class="btn-white">
                         Request a Demo

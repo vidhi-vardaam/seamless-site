@@ -195,4 +195,18 @@
     white-space: nowrap;
     border-width: 0;
   }
+
+  @media (min-width: 600px) and (max-width: 1024px) {
+    .footer-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px 150px;
+    }
+
+    .footer-grid .footer-brand {
+        width: 100%;
+    }
+}
+
 </style>

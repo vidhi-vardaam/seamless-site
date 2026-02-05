@@ -157,4 +157,10 @@
     filter: blur(2rem);
     z-index: -10;
   }
+
+  @media (min-width: 768px) {
+    .membership-bottom {
+      
+    }
+  }
 </style>

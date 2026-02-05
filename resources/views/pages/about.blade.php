@@ -254,6 +254,10 @@
         .arrow-icon {
             transition: transform 0.3s ease;
         }
+        .about-icons {
+            background-color: #EFEDFD !important;
+            display: flex !important;
+        }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -300,12 +304,12 @@
                     Built for Membership —
                     <span class="text-accent">Not Compromise</span>
                 </h1>
-                <p
-                    style="font-size: 1.125rem; color: rgba(255, 255, 255, 0.8); line-height: 1.75; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
+                <p class="about-hero-text hero-subtitle"
+                    style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.8); line-height: 1.25; margin-bottom: 2rem; max-width: 48rem; margin-left: auto; margin-right: auto;">
                     Seamless was created to solve a problem most associations quietly live with every day:
                     <span style="color: white; font-weight: 500;"> systems that work, but don't work together.</span>
                 </p>
-                <div
+                <div class="about-hero-buttons"
                     style="display: flex; gap: 1rem; justify-content: center; align-items: center;">
                     <a href="{{ route('request-demo') }}" class="btn-cta">
                         Request a Demo
@@ -322,7 +326,7 @@
     </section>
 
     <!-- Intro Section -->
-    <section style="padding: 7rem 0; position: relative; overflow: hidden;">
+    <section class="about-intro-section" style="padding: 7rem 0; position: relative; overflow: hidden;">
         <!-- Decorative background -->
         <div class="gradient-blob-1"></div>
         <div class="gradient-blob-2"></div>
@@ -345,7 +349,7 @@
                 <div class="scroll-animate animate-delay-150" style="width: 85%; margin: 0 auto;">
                     <div class="belief-box">
                         <div class="belief-box-glow"></div>
-                        <div style="display: flex; flex-direction: row; gap: 1.5rem; position: relative; z-index: 10; justify-content: space-between;">
+                        <div class="belief-box-content" style="display: flex; flex-direction: row; gap: 1.5rem; position: relative; z-index: 10; justify-content: space-between;">
                             <p class="font-display" style="font-size: 1.875rem; color: white; line-height: 1.2;">
                                 We believe associations deserve better.
                             </p>
@@ -365,7 +369,7 @@
     </section>
 
     <!-- Our Approach Section -->
-    <section style="padding: 7rem 0;  background-color: #f3f4f64d; position: relative; overflow: hidden;">
+    <section class="about-approach-section" style="padding: 7rem 0;  background-color: #f3f4f64d; position: relative; overflow: hidden;">
         <!-- Subtle pattern -->
         <div class="dot-pattern"></div>
 
@@ -384,12 +388,9 @@
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; width: 83%; margin: 0 auto;">
                     <div class="scroll-animate animate-delay-100"
                         style="padding: 2rem; border-radius: 1rem; background-color: hsl(var(--background)); border: 1px solid #e5e7eb80; height: 100%;">
-                        <div
-                            style="width: 3rem; height: 3rem; border-radius: 0.75rem; background: linear-gradient(135deg, hsla(var(--primary), 0.1), hsla(var(--secondary), 0.1)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
-                            <svg class="lucide" fill="none" stroke="hsl(var(--primary))" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
+                        <div class="about-icons"
+                            style="width: 3rem; height: 3rem; border-radius: 0.75rem; background-color: #EFEDFD display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lightbulb w-6 h-6 text-primary"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
                         </div>
                         <h3 class="font-display"
                             style="font-size: 1.25rem; color: hsl(var(--foreground)); margin-bottom: 0.75rem;">Built on a
@@ -402,7 +403,7 @@
 
                     <div class="scroll-animate animate-delay-200"
                         style="padding: 2rem; border-radius: 1rem; background-color: hsl(var(--background)); border: 1px solid #e5e7eb80; height: 100%;">
-                        <div
+                        <div class="about-icons"
                             style="width: 3rem; height: 3rem; border-radius: 0.75rem; background: linear-gradient(135deg, hsla(var(--primary), 0.1), hsla(var(--secondary), 0.1)); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
                             <svg class="lucide" fill="none" stroke="hsl(var(--primary))" viewBox="0 0 24 24">
                                 <ellipse cx="12" cy="5" rx="9" ry="3" />
@@ -435,7 +436,7 @@
     </section>
 
     <!-- Values Section -->
-    <section style="padding: 6rem 0;">
+    <section class="about-value-section" style="padding: 6rem 0;">
         <div class="container">
             <div class="scroll-animate" style="text-center; margin-bottom: 4rem;">
                 <h2 class="font-display"
@@ -449,7 +450,7 @@
                     @php
                         $values = [
                             [
-                                'icon' => '<path stroke-linecap="round" stroke-linejoin="round" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/>',
+                                'icon' => '<path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"></path>',
                                 'title' => 'Seamless',
                                 'description' => "We design for continuity. Members and staff shouldn't feel handoffs, workarounds, or system boundaries. When experiences flow naturally, trust follows.",
                                 'delay' => '0'
@@ -498,7 +499,7 @@
     </section>
 
     <!-- Why It Matters Section -->
-    <section
+    <section class="about-why-matters-section"
         style="padding: 6rem 0; position: relative; overflow: hidden; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ asset('assets/section-6-bg.png') }}')">
         <div class="container">
             <div style="max-width: 48rem; margin: 0 auto;">
@@ -564,7 +565,7 @@
     </section>
 
     <!-- Built for What Comes Next -->
-    <section style="padding: 6rem 0;">
+    <section class="about-build-next-section" style="padding: 6rem 0;">
         <div class="container">
             <div style="max-width: 49rem; margin: 0 auto; text-align: center;">
                 <div class="scroll-animate">
@@ -583,9 +584,9 @@
                     </p>
                 </div>
 
-                <div class="scroll-animate animate-delay-150">
-                    <div style="text-align: center; max-width: 32rem; margin: 0 auto 3rem;">
-                        <div
+                <div class="scroll-animate animate-delay-150 build-before-text-container">
+                    <div class="build-before-text-container" style="text-align: center; max-width: 32rem; margin: 0 auto 3rem;">
+                        <div class="build-before-text"
                             style="width: 4rem; height: 0.25rem; background-color: hsl(var(--secondary)); border-radius: 9999px; margin: 0 auto 1.5rem;">
                         </div>
                         <p style="color: hsl(var(--foreground)); font-style: italic;">
@@ -599,7 +600,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="cta-section about-cta-section">
         <div class="cta-gradient"></div>
         <div class="cta-glow-1"></div>
         <div class="cta-glow-2"></div>
@@ -614,7 +615,7 @@
                     A modern, unified AMS platform built for now — and what's to come.
                 </h2>
 
-                <div
+                <div class="cta-section-buttons"
                     style="display: flex; flex-direction: row; gap: 1rem; justify-content: center; margin-top: 2.5rem; align-items: center;">
                     <a href="{{ route('request-demo') }}" class="btn-white">
                         Request a Demo

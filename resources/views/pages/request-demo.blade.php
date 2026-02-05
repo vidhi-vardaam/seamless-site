@@ -162,7 +162,7 @@
 </section>
 
 <!-- Form Section -->
-<section style="padding: 7rem 0;">
+<section class="request-demo-faq-section" style="padding: 7rem 0;">
     <div class="container">
         <div style="max-width: 42rem; margin: 0 auto;">
             <!-- Success Message (hidden by default) -->
@@ -171,10 +171,10 @@
                     <svg class="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                     </svg>
-                    <h2 class="font-display" style="font-size: 2.25rem; color: hsl(var(--foreground)); margin-bottom: 1rem;">
+                    <h2 class="font-display" style="font-size: clamp(1.875rem, 4vw, 3rem); color: hsl(var(--foreground)); margin-bottom: 1rem;">
                         Thank you for your interest!
                     </h2>
-                    <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7);">
+                    <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); line-height: 1.75;">
                         We've received your request and will be in touch within one business day to schedule your demo.
                     </p>
                 </div>
@@ -183,10 +183,10 @@
             <!-- Demo Form (visible by default) -->
             <div id="demoForm" class="scroll-animate">
                 <div class="form-card">
-                    <h2 class="font-display" style="font-size: 1.875rem; color: hsl(var(--foreground)); margin-bottom: 0.5rem;">
+                    <h2 class="font-display" style="font-size: clamp(1.875rem, 4vw, 3rem); color: hsl(var(--foreground)); margin-bottom: 0.5rem;">
                         Request your demo
                     </h2>
-                    <p style="color: hsl(var(--foreground) / 0.7); margin-bottom: 2rem;">
+                    <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); line-height: 1.75; margin-bottom: 2rem;">
                         Fill out the form below and we'll reach out to schedule a time that works for you.
                     </p>
                     

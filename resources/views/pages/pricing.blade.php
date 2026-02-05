@@ -36,36 +36,18 @@
     }
 
     .pricing-hero-title {
-      font-size: 3rem;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
       font-weight: 700;
       color: white;
       margin-bottom: 1.5rem;
-      letter-spacing: -0.025em;
-    }
-
-    @media (min-width: 768px) {
-      .pricing-hero-title {
-        font-size: 3.75rem;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .pricing-hero-title {
-        font-size: 4.5rem;
-      }
+      letter-spacing: -0.02em;
     }
 
     .pricing-hero-subtitle {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 2.5rem;
-      font-weight: 300;
-    }
-
-    @media (min-width: 768px) {
-      .pricing-hero-subtitle {
-        font-size: 1.5rem;
-      }
+      line-height: 1.75;
     }
 
     .pricing-hero-buttons {
@@ -96,7 +78,7 @@
     }
 
     .pricing-tiers-title {
-      font-size: 2.25rem;
+      font-size: clamp(1.875rem, 4vw, 3rem);
       font-weight: 700;
       color: hsl(var(--foreground));
       margin-bottom: 1rem;
@@ -104,13 +86,14 @@
 
     @media (min-width: 768px) {
       .pricing-tiers-title {
-        font-size: 3rem;
+        font-size: clamp(1.875rem, 4vw, 3rem);
       }
     }
 
     .pricing-tiers-subtitle {
-      font-size: 1.25rem;
+      font-size: 1.125rem;
       color: hsl(var(--muted-foreground));
+      line-height: 1.75;
     }
 
     .pricing-tiers-content {
@@ -124,7 +107,7 @@
     }
 
     .pricing-display-price {
-      font-size: 3.75rem;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
       font-weight: 700;
       color: hsl(var(--primary));
       margin-bottom: 0.5rem;
@@ -132,7 +115,7 @@
 
     @media (min-width: 768px) {
       .pricing-display-price {
-        font-size: 4.5rem;
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
       }
     }
 
@@ -287,7 +270,7 @@
     }
 
     .whats-included-title {
-      font-size: 2.25rem;
+      font-size: clamp(1.875rem, 4vw, 3rem);
       font-weight: 700;
       color: hsl(var(--foreground));
       margin-bottom: 1rem;
@@ -295,7 +278,7 @@
 
     @media (min-width: 768px) {
       .whats-included-title {
-        font-size: 3rem;
+        font-size: clamp(1.875rem, 4vw, 3rem);
       }
     }
 
@@ -521,9 +504,9 @@
 
     .testimonial-quote {
       font-size: 1.5rem;
-      font-weight: 700;
+      font-weight: 400;
       color: hsl(var(--foreground));
-      line-height: 1.625;
+      line-height: 2.05rem;
       margin-bottom: 2rem;
     }
 
@@ -573,7 +556,7 @@
     }
 
     .faq-list {
-      max-width: 52rem;
+      max-width: 48rem;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -651,6 +634,10 @@
       border-top: 1px solid hsl(var(--border) / 0.1);
     }
 
+    .accordion-item.scroll-animate.active {
+    background: #FBFBFC;
+}
+
     @media (min-width: 768px) {
       .closing {
         padding: 8rem 0;
@@ -694,27 +681,21 @@
     }
 
     .closing-title {
-      font-size: 2.75rem;
+      font-size: clamp(2.5rem, 6vw, 3.1rem);
       font-weight: 700;
       color: white;
       margin-bottom: 1.5rem;
       letter-spacing: -0.02em;
     }
 
-    @media (min-width: 768px) {
-      .closing-title {
-        font-size: 3.5rem;
-      }
-    }
-
     .closing-text {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.125rem;
+      color: rgba(255, 255, 255, 0.8);
       margin-bottom: 3rem;
       max-width: 42rem;
       margin-left: auto;
       margin-right: auto;
-      font-weight: 300;
+      line-height: 1.75;
     }
 
     .closing-buttons {
@@ -766,11 +747,11 @@
   @endphp
 
   <!-- Hero Section -->
-  <section class="pricing-hero" style="background-image: url('{{ asset('assets/inner-page-header.png') }}');">
+  <section class="pricing-hero pricint-hero-section" style="background-image: url('{{ asset('assets/inner-page-header.png') }}');">
     <div class="pricing-hero-overlay"></div>
     <div class="pricing-hero-container">
       <div class="pricing-hero-content scroll-animate">
-        <h1 class="pricing-hero-title">
+        <h1 class="hero-title pricing-hero-title">
           Transparent pricing, designed to <span class="text-accent">scale with you.</span>
         </h1>
         <p class="pricing-hero-subtitle">
@@ -786,7 +767,7 @@
   </section>
 
   <!-- Pricing Tiers Section -->
-  <section class="pricing-tiers">
+  <section class="pricing-tiers pricing-tiers-section">
     <div class="pricing-tiers-container">
       <div class="pricing-tiers-header scroll-animate">
         <h2 class="pricing-tiers-title">
@@ -841,7 +822,7 @@
   </section>
 
   <!-- What's Included Section -->
-  <section class="whats-included" style="background-image: url('{{ asset('assets/section-6-bg.png') }}');">
+  <section class="whats-included pricing-whats-included-section" style="background-image: url('{{ asset('assets/section-6-bg.png') }}');">
     <div class="whats-included-overlay"></div>
 
     <div class="whats-included-container">
@@ -860,35 +841,17 @@
             <div class="feature-card scroll-animate" style="animation-delay: {{ $index * 100 }}ms;">
               <div class="feature-icon">
                 @if ($feature['title'] === 'Membership lifecycle management')
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-2a6 6 0 0112 0v2zm0 0h6v-2a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users w-6 h-6 text-primary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                 @elseif ($feature['title'] === 'Member-aware events & registrations')
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-6 h-6 text-primary"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
                 @elseif ($feature['title'] === 'Learning, CEUs & credentials')
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17.25c0 5.105 3.07 9.408 7.5 11.398m0-13c5.5 0 10 4.745 10 10.997v13m0-13C17.5 6.253 21 10.998 21 17.25" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap w-6 h-6 text-primary"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>
                 @elseif ($feature['title'] === 'Website integrations')
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9-9a9 9 0 019 9" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe w-6 h-6 text-primary"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
                 @elseif ($feature['title'] === 'Reporting, APIs & Single Sign-On')
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-column w-6 h-6 text-primary"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
                 @else
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headphones w-6 h-6 text-primary"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"></path></svg>
                 @endif
               </div>
               <h3 class="feature-card-title">
@@ -928,7 +891,7 @@
   </section>
 
   <!-- Implementation Section -->
-  <section class="implementation">
+  <section class="implementation pricing-implementation-section">
     <div class="implementation-container">
       <div class="implementation-content scroll-animate">
         <div class="implementation-header">
@@ -962,7 +925,7 @@
   </section>
 
   <!-- Testimonial Section -->
-  <section class="testimonial">
+  <section class="testimonial pricing-testimonial-section">
     <div class="testimonial-container">
       <div class="testimonial-content scroll-animate">
         <blockquote class="testimonial-quote">
@@ -977,7 +940,7 @@
   </section>
 
   <!-- FAQ Section -->
-  <section class="faq">
+  <section class="faq pricing-faq-section">
     <div class="faq-container">
       <div class="faq-header scroll-animate">
         <h2 class="faq-title">
@@ -987,7 +950,7 @@
 
       <div class="faq-list">
         @foreach ($faqs as $index => $faq)
-          <div class="accordion-item scroll-animate" style="animation-delay: {{ $index * 100 }}ms;"
+          <div class="accordion-item scroll-animate {{ $index === 0 ? 'active' : '' }}" style="animation-delay: {{ $index * 100 }}ms;"
             data-index="{{ $index }}">
             <div class="accordion-header" onclick="toggleAccordion(this)">
               <span class="accordion-question">{{ $faq['question'] }}</span>
@@ -1005,7 +968,7 @@
   </section>
 
   <!-- Closing Section -->
-  <section class="closing">
+  <section class="closing pricing-closing-section">
     <div class="closing-glow-1"></div>
     <div class="closing-glow-2"></div>
 

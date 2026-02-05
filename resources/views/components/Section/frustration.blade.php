@@ -37,7 +37,7 @@
 
   @media (min-width: 768px) {
     .frustration-section {
-      background-position: left;
+      background-position: center;
     }
   }
 
