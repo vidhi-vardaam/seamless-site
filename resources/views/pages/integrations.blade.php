@@ -41,27 +41,28 @@
       <div class="container relative z-10">
         <div class="hero-content-inner">
           <x-ui.scroll-animate animation="fade-up">
-            <h1 class="hero-title font-display tracking-tight">
+            <h1 class="hero-title font-display tracking-tight" style="font-size: clamp(2.5rem, 6vw, 4.5rem); color: white; margin-bottom: 1.5rem; line-height: 1.1; letter-spacing: -0.02em;">
               Seamless Management, <span class="text-accent">Successful Events</span>
             </h1>
           </x-ui.scroll-animate>
 
           <x-ui.scroll-animate animation="fade-up" delay="100">
-            <p class="hero-subtitle">
+            <p class="hero-subtitle" style="font-size: 1.5rem; color: rgba(255, 255, 255, 0.8); line-height: 1.25; margin-bottom: 2rem;">
               Connect Seamless with the tools you already use to create a unified management ecosystem.
             </p>
             </x-scroll-animate>
 
             <x-ui.scroll-animate animation="fade-up" delay="200">
-              <div class="hero-actions">
-                <button class="btn-white-footer font-semibold">
+              <div class="feature-hero-buttons" style="display: flex; flex-direction: row; gap: 1rem; justify-content: center; align-items: center; margin-top: 2rem;">
+                <a href="#software-section" class="btn-white">
                   Explore Integrations
-                  <svg class="btn-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <svg class="lucide-sm arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                   </svg>
-                </button>
-                <button class="btn-outline-footer">View
-                  Documentation</button>
+                </a>
+                <a href="#documentation-section" class="btn-secondary">
+                  View Documentation
+                </a>
               </div>
               </x-scroll-animate>
         </div>
@@ -69,7 +70,7 @@
     </section>
 
     <!-- Connect with Leading Software -->
-    <section class="section-software">
+    <section class="section-software integration-leading-section">
       <div class="container">
         <div class="software-grid">
           <x-ui.scroll-animate animation="fade-right">
@@ -101,7 +102,7 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section-stats">
+    <section class="section-stats integration-stats-section">
       <div class="container">
         <div class="stats-grid">
           @foreach($stats as $idx => $stat)
@@ -117,7 +118,7 @@
     </section>
 
     <!-- Documentation Section -->
-    <section class="section-documentation" style="background-image: url('{{ asset('assets/section-6-bg.png') }}')">
+    <section class="section-documentation integration-documentation-section" style="background-image: url('{{ asset('assets/section-6-bg.png') }}')">
       <div class="container relative">
         <x-ui.scroll-animate animation="fade-up">
           <div class="doc-header">
@@ -196,7 +197,7 @@
     </section>
 
     <!-- Featured Integrations -->
-    <section id="{{ $id }}" class="section-featured">
+    <section id="{{ $id }}" class="section-featured integration-featured-section">
       <div class="featured-bg-glow-1"></div>
       <div class="featured-bg-glow-2"></div>
 
@@ -243,7 +244,7 @@
     </section>
 
     <!-- Closing CTA -->
-    <section class="section-cta-footer">
+    <section class="section-cta-footer integration-cta-section">
       <div class="cta-footer-bg"></div>
       <div class="cta-footer-glow-1"></div>
       <div class="cta-footer-glow-2"></div>
@@ -261,13 +262,12 @@
             </p>
 
             <div class="cta-footer-buttons">
-              <a href="{{ route('request-demo') }}" class="btn-white-footer font-semibold">
-                Request a Demo
-                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </a>
+              <a href="https://seamless-site.test/request-demo" class="btn-white">
+                        Request a Demo
+                        <svg class="lucide-sm arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </a>
               <a href="{{ route('contact') }}" class="btn-outline-footer font-semibold">
                 Contact Sales
               </a>

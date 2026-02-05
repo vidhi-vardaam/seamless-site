@@ -204,16 +204,16 @@
 </section>
 
 <!-- Contact Section -->
-<section style="padding: 7rem 0;">
+<section class="contact-form-section" style="padding: 7rem 0;">
     <div class="container">
         <div class="contact-grid">
             <!-- Contact Info -->
             <div>
                 <div class="scroll-animate">
-                    <h2 class="font-display" style="font-size: 1.875rem; color: hsl(var(--foreground)); margin-bottom: 1.5rem;">
+                    <h2 class="font-display" style="font-size: clamp(1.875rem, 4vw, 3rem); color: hsl(var(--foreground)); margin-bottom: 1.5rem;">
                         Get in touch
                     </h2>
-                    <p style="color: hsl(var(--foreground) / 0.7); margin-bottom: 2rem;">
+                    <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); line-height: 1.75; margin-bottom: 2rem;">
                         Whether you're exploring Seamless for the first time or have specific questions about implementation, our team is ready to help.
                     </p>
                     
@@ -267,10 +267,10 @@
                         <svg class="success-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
-                        <h2 class="font-display" style="font-size: 2.25rem; color: hsl(var(--foreground)); margin-bottom: 1rem;">
+                        <h2 class="font-display" style="font-size: clamp(1.875rem, 4vw, 3rem); color: hsl(var(--foreground)); margin-bottom: 1rem;">
                             Message sent!
                         </h2>
-                        <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7);">
+                        <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); line-height: 1.75;">
                             Thank you for reaching out. We'll respond within one business day.
                         </p>
                     </div>

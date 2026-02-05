@@ -124,7 +124,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section
+    <section class="faq-section"
         style="padding: 5rem 0; position: relative; background-size: cover; background-position: center; background-repeat: no-repeat; background-image: url('{{ asset('assets/section-6-bg.png') }}')">
         <div style="position: absolute; inset: 0; background-color: rgba(255, 255, 255, 0.8);"></div>
         <div class="container" style="position: relative; z-index: 10;">
@@ -189,7 +189,7 @@
                         @endphp
 
                         @foreach($faqs as $index => $faq)
-                            <div class="accordion-item" data-accordion-item>
+                            <div class="accordion-item {{ $index === 0 ? 'active' : '' }}" data-accordion-item>
                                 <button class="accordion-trigger" type="button">
                                     <span>{{ $faq['question'] }}</span>
                                     <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,13 +211,13 @@
     </section>
 
     <!-- CTA Section -->
-    <section style="padding: 7rem 0; background-color: hsla(var(--muted), 0.3);">
+    <section class="faq-cta-section" style="padding: 7rem 0; background-color: hsla(var(--muted), 0.3);">
         <div class="container">
             <div class="scroll-animate" style="max-width: 46rem; margin: 0 auto; text-align: center;">
-                <h2 class="font-display" style="font-size: 2.25rem; color: hsl(var(--foreground)); margin-bottom: 1rem;">
+                <h2 class="font-display" style="font-size: clamp(1.875rem, 4vw, 3rem); color: hsl(var(--foreground)); margin-bottom: 1rem;">
                     Still have questions?
                 </h2>
-                <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); margin-bottom: 2rem;">
+                <p style="font-size: 1.125rem; color: hsl(var(--foreground) / 0.7); line-height: 1.75; margin-bottom: 2rem;">
                     We're here to help. Let's start a conversation about your organization's needs.
                 </p>
                 <a href="{{ route('contact') }}" class="btn-cta">
